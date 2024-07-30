@@ -1,0 +1,187 @@
+07/25/2024 17:27:52 - INFO - transformers.tokenization_utils_base - loading file added_tokens.json
+
+07/25/2024 17:27:52 - INFO - transformers.tokenization_utils_base - loading file special_tokens_map.json
+
+07/25/2024 17:27:52 - INFO - transformers.tokenization_utils_base - loading file tokenizer_config.json
+
+07/25/2024 17:27:52 - WARNING - transformers.tokenization_utils_base - Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+07/25/2024 17:27:52 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:52 - WARNING - transformers.tokenization_utils_base - Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:27:58 - INFO - llamafactory.data.loader - Loading dataset test_b_final.json...
+
+07/25/2024 17:28:03 - INFO - transformers.configuration_utils - loading configuration file saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500/config.json
+
+07/25/2024 17:28:03 - INFO - transformers.configuration_utils - Model config Qwen2Config {
+  "_name_or_path": "saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500",
+  "architectures": [
+    "Qwen2ForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "hidden_act": "silu",
+  "hidden_size": 5120,
+  "initializer_range": 0.02,
+  "intermediate_size": 13696,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 35,
+  "model_type": "qwen2",
+  "num_attention_heads": 40,
+  "num_hidden_layers": 40,
+  "num_key_value_heads": 40,
+  "rms_norm_eps": 1e-06,
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.41.2",
+  "use_cache": false,
+  "use_sliding_window": false,
+  "vocab_size": 152064
+}
+
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - transformers.modeling_utils - loading weights file saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500/model.safetensors.index.json
+
+07/25/2024 17:28:03 - INFO - transformers.modeling_utils - Instantiating Qwen2ForCausalLM model under default dtype torch.float16.
+
+07/25/2024 17:28:03 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643
+}
+
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:03 - INFO - llamafactory.model.patcher - Using KV cache for faster generation.
+
+07/25/2024 17:28:16 - INFO - transformers.modeling_utils - All model checkpoint weights were used when initializing Qwen2ForCausalLM.
+
+
+07/25/2024 17:28:16 - INFO - transformers.modeling_utils - All the weights of Qwen2ForCausalLM were initialized from the model checkpoint at saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen2ForCausalLM for predictions without further training.
+
+07/25/2024 17:28:16 - INFO - transformers.generation.configuration_utils - loading configuration file saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500/generation_config.json
+
+07/25/2024 17:28:16 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151643,
+  "max_new_tokens": 2048
+}
+
+
+07/25/2024 17:28:16 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:16 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:16 - INFO - transformers.trainer - ***** Running Prediction *****
+
+07/25/2024 17:28:16 - INFO - transformers.trainer -   Num examples = 1274
+
+07/25/2024 17:28:16 - INFO - transformers.trainer -   Batch size = 2
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:18 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:19 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:19 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:20 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:20 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 17:28:21 - INFO - llamafactory.model.model_utils.attention - Using vanilla attention implementation.
+
+07/25/2024 17:28:21 - INFO - llamafactory.model.loader - all params: 14167290880
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpivj8_k36' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpmargjxgr' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpffs7hpk3' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpql1sx7ub' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpibussldj' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpn3o43un4' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpt88pq0ah' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:43 - ERROR - jieba - Dump cache file failed.
+Traceback (most recent call last):
+  File "/home/peiyanpan/miniconda3/envs/pyp/lib/python3.10/site-packages/jieba/__init__.py", line 154, in initialize
+    _replace_file(fpath, cache_file)
+PermissionError: [Errno 1] Operation not permitted: '/tmp/tmpi892lcv3' -> '/tmp/jieba.cache'
+
+07/25/2024 18:12:49 - INFO - llamafactory.train.sft.trainer - Saving prediction results to saves/Qwen1.5-14B/full/eval_2024-07-25-17-26-19add1500/generated_predictions.jsonl
+

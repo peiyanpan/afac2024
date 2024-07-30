@@ -1,0 +1,19 @@
+eval.batch_size: 2
+eval.cutoff_len: 1024
+eval.dataset:
+- test_b_final
+eval.dataset_dir: data
+eval.max_new_tokens: 1024
+eval.max_samples: '100000'
+eval.output_dir: eval_2024-07-25-17-26-19add1500
+eval.predict: true
+eval.temperature: 0.75
+eval.top_p: 0.65
+top.booster: none
+top.checkpoint_path: train_2024-07-25-15-52-15_add1500
+top.finetuning_type: full
+top.model_name: Qwen1.5-14B
+top.quantization_bit: none
+top.rope_scaling: none
+top.template: default
+top.visual_inputs: false

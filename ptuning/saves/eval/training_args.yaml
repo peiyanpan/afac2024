@@ -1,0 +1,17 @@
+cutoff_len: 1024
+dataset: test_b_final
+dataset_dir: data
+do_predict: true
+finetuning_type: full
+flash_attn: auto
+max_new_tokens: 1024
+max_samples: 100000
+model_name_or_path: saves/Qwen1.5-14B/full/train_2024-07-25-15-52-15_add1500
+output_dir: saves/Qwen1.5-14B/full/eval_2024-07-25-17-26-19add1500
+per_device_eval_batch_size: 2
+predict_with_generate: true
+preprocessing_num_workers: 16
+stage: sft
+temperature: 0.75
+template: default
+top_p: 0.65

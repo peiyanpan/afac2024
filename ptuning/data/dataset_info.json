@@ -1,0 +1,8 @@
+{
+  "train": {
+    "file_name": "train.json"
+  },
+  "test": {
+    "file_name": "test.json"
+  }
+}

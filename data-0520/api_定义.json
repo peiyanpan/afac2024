@@ -1,0 +1,5362 @@
+[
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询代码",
+        "api_description": "这个API接口的功能是接收运算符和基金代码作为输入，返回与输入的基金代码匹配的基金详细信息。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金代码": {
+                    "type": "string",
+                    "description": "基金代码的准确值"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金代码"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询类型",
+        "api_description": "这个API接口的功能是接收运算符和基金类型作为输入，返回相应类型的基金列表。通过这个接口，用户可以查询到该类型的所有基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金类型": {
+                    "type": "string",
+                    "description": "基金类型，如混合型、指数型、货币型等"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金类型"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询规模",
+        "api_description": "这个API接口的功能是接收运算符和基金规模作为输入，并返回与给定条件相符的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "规模": {
+                    "type": "string",
+                    "description": "基金规模描述，比如规模适中、规模大等"
+                }
+            },
+            "required": [
+                "运算符",
+                "规模"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询晨星评级",
+        "api_description": "这个API接口的功能是接收运算符和晨星评级作为输入，返回对应晨星评级的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "晨星评级": {
+                    "type": "string",
+                    "description": "晨星评级等级"
+                }
+            },
+            "required": [
+                "运算符",
+                "晨星评级"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询蚂蚁评级",
+        "api_description": "这个API接口的功能是接收运算符和蚂蚁评级作为输入，返回具有指定评级的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "评级": {
+                    "type": "string",
+                    "description": "蚂蚁评级描述，候选值包括蚂蚁0星、蚂蚁4星、蚂蚁2星、蚂蚁5星、蚂蚁3星、蚂蚁1星"
+                }
+            },
+            "required": [
+                "运算符",
+                "评级"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询申购费率",
+        "api_description": "这个API接口的功能是接收运算符和申购费率作为输入，返回满足条件的基金列表。用户可以通过这个接口查询符合特定申购费率条件的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "申购费率": {
+                    "type": "float",
+                    "description": "基金的申购费率"
+                }
+            },
+            "required": [
+                "运算符",
+                "申购费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询成立年限",
+        "api_description": "这个API接口的功能是接收运算符和基金的成立日期作为输入，返回满足条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "成立日期": {
+                    "type": "float",
+                    "description": "基金成立的日期"
+                }
+            },
+            "required": [
+                "运算符",
+                "成立日期"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询开放类型",
+        "api_description": "这个API接口的功能是接收运算符和基金的开放类型作为输入，返回属于该开放类型的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "开放类型": {
+                    "type": "string",
+                    "description": "基金的开放类型，例如：定开型、滚动发行、封闭型、开放型、锁定持有"
+                }
+            },
+            "required": [
+                "运算符",
+                "开放类型"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询申购状态",
+        "api_description": "这个API接口的功能是根据申购状态和运算符来筛选基金，返回符合该状态的基金列表。用户可以通过这个接口查询具有特定申购状态的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "申购状态": {
+                    "type": "string",
+                    "description": "基金的申购状态，例如不可售、正常认购、暂停销售、正常申购等"
+                }
+            },
+            "required": [
+                "运算符",
+                "申购状态"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询蚂蚁金选标识",
+        "api_description": "这个API接口的功能是接收运算符和蚂蚁金选标识作为输入，返回符合该标识条件的基金名称列表。蚂蚁金选标识表示该基金是否被蚂蚁金服平台选中为推荐产品。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "蚂蚁金选标识": {
+                    "type": "string",
+                    "description": "基金的蚂蚁金选标识，候选值是“是”或“否”"
+                }
+            },
+            "required": [
+                "运算符",
+                "蚂蚁金选标识"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询风险等级",
+        "api_description": "这个API接口的功能是接收运算符和风险等级作为输入，返回对应风险等级的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "风险等级": {
+                    "type": "string",
+                    "description": "基金风险等级，可选值为低风险、中风险、中高风险、高风险、中低风险"
+                }
+            },
+            "required": [
+                "运算符",
+                "风险等级"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理类型",
+        "api_description": "这个API接口的功能是接收运算符和基金经理的类型作为输入，返回属于该类型的基金经理名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金经理类型": {
+                    "type": "string",
+                    "description": "基金经理的奖项或评级类型，如'金牛奖经理'"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金经理类型"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理",
+        "api_description": "这个API接口的功能是根据运算符和基金经理姓名，查询该基金经理管理的基金信息。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金经理": {
+                    "type": "string",
+                    "description": "基金经理的姓名"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金经理"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金公司",
+        "api_description": "这个API接口的功能是接收运算符和基金公司名称作为输入，返回属于该基金公司的基金名称。用户可以通过这个接口查询属于某个基金公司的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金公司": {
+                    "type": "string",
+                    "description": "基金公司名称"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金公司"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理从业年限",
+        "api_description": "这个API接口的功能是接收运算符和基金经理从业年限描述作为输入，返回满足从业年限条件的基金经理及其管理的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "从业年限描述": {
+                    "type": "string",
+                    "description": "基金经理的从业年限描述，候选值是：短、较短、较长、适中、长"
+                }
+            },
+            "required": [
+                "运算符",
+                "从业年限描述"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理管理规模",
+        "api_description": "这个API接口的功能是接收运算符和基金经理的管理规模描述作为输入，返回符合指定管理规模描述的基金经理列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "管理规模": {
+                    "type": "string",
+                    "description": "基金经理的管理规模描述，候选值是管理规模较小、管理规模小、管理规模大、管理规模适中、管理规模较大"
+                }
+            },
+            "required": [
+                "运算符",
+                "管理规模"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理年化回报率",
+        "api_description": "这个API接口的功能是接收运算符和基金经理年化回报评级作为输入，依据评级返回相应的基金经理及其管理的基金信息。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金经理年化回报评级": {
+                    "type": "string",
+                    "description": "基金经理年化回报的评级描述"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金经理年化回报评级"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询持股估值",
+        "api_description": "这个API接口的功能是接收运算符和持股估值级别作为输入，返回对应持股估值级别的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "持股估值": {
+                    "type": "string",
+                    "description": "基金的持股估值级别，候选值是持股估值低、持股估值高、持股估值较高、持股估值较低"
+                }
+            },
+            "required": [
+                "运算符",
+                "持股估值"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询持股集中度",
+        "api_description": "这个API接口的功能是接收运算符和持股集中度描述作为输入，返回根据描述的持股集中度范围筛选出的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "持股集中度": {
+                    "type": "string",
+                    "description": "基金的持股集中度描述，例如‘持股集中’、‘持股较分散’、‘持股较集中’、‘持股分散’"
+                }
+            },
+            "required": [
+                "运算符",
+                "持股集中度"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询持股热门度",
+        "api_description": "这个API接口的功能是接收运算符和持股热门度作为输入，返回持有相应热门度股票的基金名称列表。通过此接口，用户能够根据基金持有股票的热门度来筛选基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "热门度": {
+                    "type": "string",
+                    "description": "持股热门度描述，候选值有：偏爱冷门股、较偏爱热门股、较偏爱冷门股、偏爱热门股"
+                }
+            },
+            "required": [
+                "运算符",
+                "热门度"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询持股换手率",
+        "api_description": "这个API接口的功能是接收运算符和基金的调仓频率描述作为输入，返回符合该调仓频率描述的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "调仓频率": {
+                    "type": "string",
+                    "description": "基金的调仓频率描述，该值表示基金的持股换手率层级，例如：调仓频率较低、调仓频率低、调仓频率高、调仓频率较高"
+                }
+            },
+            "required": [
+                "运算符",
+                "调仓频率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询机构占比",
+        "api_description": "这个API接口的功能是接收运算符和机构占比的描述作为输入，返回机构占比情况符合描述的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，这个API下固定为“等于”"
+                },
+                "机构占比": {
+                    "type": "string",
+                    "description": "基金机构投资者占比的描述，候选值为：机构占比较低、机构占比较高、机构占比高、机构占比适中、机构占比低。"
+                }
+            },
+            "required": [
+                "运算符",
+                "机构占比"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询单一持有人占比",
+        "api_description": "这个API接口的功能是接收运算符和单一持有人占比描述作为输入，返回根据描述条件筛选出基金的名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "持有人占比": {
+                    "type": "string",
+                    "description": "单一持有人占比的描述，为如下固定描述：低、较低、高、较高、适中"
+                }
+            },
+            "required": [
+                "运算符",
+                "持有人占比"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询重仓股票",
+        "api_description": "这个API接口的功能是接收运算符和一个包含多个股票名称的数组作为输入，返回持有这些股票作为重仓股的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“包含”"
+                },
+                "重仓股票": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "重仓股票列表，用户通过该参数提交希望查询的重仓股票名称。"
+                }
+            },
+            "required": [
+                "运算符",
+                "重仓股票"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询重仓行业",
+        "api_description": "这个API接口的功能是接收运算符和一系列行业名称作为输入，返回那些在这些行业中有重仓投资的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，这里一般是指是否包含给定的行业名称"
+                },
+                "行业": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "行业名称列表"
+                }
+            },
+            "required": [
+                "运算符",
+                "行业"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询持仓风格",
+        "api_description": "这个API接口的功能是接收运算符和持仓风格作为输入，返回属于这一持仓风格的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "持仓风格": {
+                    "type": "string",
+                    "description": "基金的持仓风格"
+                }
+            },
+            "required": [
+                "运算符",
+                "持仓风格"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金公司是否自购",
+        "api_description": "这个API接口的功能是接收运算符和自购信息作为输入，返回所有符合自购条件的基金公司。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "自购信息": {
+                    "type": "string",
+                    "description": "基金公司是否有自购行为，候选值为：是、否"
+                }
+            },
+            "required": [
+                "运算符",
+                "自购信息"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询是否可投沪港深",
+        "api_description": "这个API接口的功能是接收运算符和是否可投资沪港深基金的条件作为输入，返回符合该条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "是否可投沪港深": {
+                    "type": "string",
+                    "description": "指定基金是否可以投资于沪港深市场的条件标识，候选值为‘是’或‘否’。"
+                }
+            },
+            "required": [
+                "运算符",
+                "是否可投沪港深"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近一年买入持有6个月历史盈利概率",
+        "api_description": "这个API接口的功能是根据用户指定的运算符和盈利概率，返回近一年内买入并持有6个月后具有指定盈利概率的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "盈利概率": {
+                    "type": "float",
+                    "description": "基金的历史盈利概率，范围在0.0到1.0之间"
+                }
+            },
+            "required": [
+                "运算符",
+                "盈利概率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近3年买入持有1年历史盈利概率",
+        "api_description": "这个API接口的功能是接收运算符和历史盈利概率作为输入，返回在近3年内，买入并持有1年的基金，其历史盈利概率满足所设条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "盈利概率": {
+                    "type": "float",
+                    "description": "基金买入后持有1年的历史盈利概率"
+                }
+            },
+            "required": [
+                "运算符",
+                "盈利概率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近5年买入持有1年历史盈利概率",
+        "api_description": "这个API接口的功能是接收运算符和历史盈利概率作为输入，返回在过去5年内，买入并持有1年后的历史盈利概率满足条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "盈利概率": {
+                    "type": "float",
+                    "description": "基金买入后持有1年的历史盈利概率"
+                }
+            },
+            "required": [
+                "运算符",
+                "盈利概率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期收益率",
+        "api_description": "这个API接口的功能是接收运算符、收益率、时间作为输入，返回属于在指定时间内的满足收益率条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "收益率": {
+                    "type": "float",
+                    "description": "基金收益率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内每个基金的收益率，候选值为：今年来、6个月、3个月、1个月、1周、5年、3年、1年、昨日、成立以来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "收益率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期收益率同类排名",
+        "api_description": "这个API接口的功能是接收运算符、收益率排名、时间作为输入，返回指定时间段内满足收益率排名条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "收益率排名": {
+                    "type": "float",
+                    "description": "基金在同类中的收益率排名"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内基金同类排名情况，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "收益率排名",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期年化收益率",
+        "api_description": "这个API接口的功能是接收运算符、年化收益率、时间作为输入，返回在指定时间范围内满足年化收益率条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值包括大于、小于、等于"
+                },
+                "年化收益率": {
+                    "type": "float",
+                    "description": "基金的年化收益率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询在此期间基金的年化收益率，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "年化收益率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期年化收益率同类排名",
+        "api_description": "这个API接口的功能是接收运算符、年化收益率、时间作为输入，返回在指定时间内年化收益率达到条件的基金同类排名列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "年化收益率": {
+                    "type": "float",
+                    "description": "基金的年化收益率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内基金的年化收益率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "年化收益率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期超大盘收益率",
+        "api_description": "这个API接口的功能是接收运算符、超大盘收益率、时间作为输入，返回在指定时间内满足给定超大盘收益率条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "超大盘收益率": {
+                    "type": "float",
+                    "description": "针对超大盘基金的收益率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询指定时间段内每个基金的超大盘收益率，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来、2022、2021、2020、2019、2018、2017、2016、2015。"
+                }
+            },
+            "required": [
+                "运算符",
+                "超大盘收益率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期创新高次数",
+        "api_description": "这个API接口的功能是接收运算符、创新高次数、时间作为输入，返回在指定时间段内达到或超过创新高次数条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "创新高次数": {
+                    "type": "float",
+                    "description": "基金在指定时间段内创新高的次数"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间段，以便API能查找在该时间段内创新高的次数，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "创新高次数",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期最大回撤",
+        "api_description": "这个API接口的功能是接收运算符、最大回撤比例、时间作为输入，返回在指定时间内满足最大回撤条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "最大回撤比例": {
+                    "type": "float",
+                    "description": "基金的最大回撤比例值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内每个基金的最大回撤，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "最大回撤比例",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期最大回撤同类排名",
+        "api_description": "这个API接口的功能是接收运算符、同类排名、时间作为输入，返回在指定时间段内满足最大回撤同类排名条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "同类排名": {
+                    "type": "float",
+                    "description": "基金在同类排名中的位置"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间长度，以便API能查询指定时间段内基金的最大回撤同类排名，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "同类排名",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期波动率同类排名",
+        "api_description": "这个API接口的功能是接收运算符、波动率排名、时间作为输入，返回在指定时间内按波动率进行同类排名的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值包括小于、小于等于、等于、大于等于、大于"
+                },
+                "波动率排名": {
+                    "type": "float",
+                    "description": "基金同类波动率排名"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内基金的波动率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "波动率排名",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期最长解套天数",
+        "api_description": "这个API接口的功能是接收运算符、最长解套天数、时间作为输入，返回在指定时间段内满足解套天数条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为大于、小于、等于"
+                },
+                "最长解套天数": {
+                    "type": "float",
+                    "description": "基金最长解套天数值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内每个基金的最长解套天数，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "最长解套天数",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期跟踪误差",
+        "api_description": "这个API接口的功能是接收运算符、跟踪误差、时间作为输入，返回在指定时间内满足跟踪误差条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "跟踪误差": {
+                    "type": "float",
+                    "description": "基金的跟踪误差值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内每个基金的跟踪误差，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "跟踪误差",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期夏普比率同类排名",
+        "api_description": "这个API接口的功能是接收运算符、夏普比率值、时间作为输入，返回在指定时间内的基金按照夏普比率的同类排名。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "夏普比率": {
+                    "type": "float",
+                    "description": "基金的夏普比率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间阶段，以便API能查询在指定时间内每个基金的夏普比率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "夏普比率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期卡玛比率同类排名",
+        "api_description": "该API接口的功能是接收运算符、卡玛比率及时间作为输入，返回在指定时间段内满足卡玛比率条件的基金的同类排名信息。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "卡玛比率": {
+                    "type": "float",
+                    "description": "基金的卡玛比率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义用户想要查询的时间范围，以便API查询该时间范围内的基金卡玛比率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "卡玛比率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期信息比率同类排名",
+        "api_description": "这个API接口的功能是接收运算符、信息比率、时间作为输入，返回在指定时间内基金信息比率的同类排名列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为大于、小于、等于"
+                },
+                "信息比率": {
+                    "type": "float",
+                    "description": "基金的信息比率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，用来筛选基金信息比率的同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "运算符",
+                "信息比率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询年度收益率",
+        "api_description": "这个API接口的功能是根据运算符和指定的年份，返回满足条件的各个基金在那一年的收益率。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为大于、小于、等于"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数指定了年份，以便API能根据用户选择的年份返回相应的基金年度收益率，候选值为：2022、2021、2020、2019、2018、2017、2016、2015。"
+                },
+                "收益率": {
+                    "type": "float",
+                    "description": "基金年度收益率的数值"
+                }
+            },
+            "required": [
+                "运算符",
+                "时间",
+                "收益率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期指数增强",
+        "api_description": "这个API接口的功能是接收运算符、增强收益率、时间作为输入，返回在指定时间内的满足指定增强收益率条件的指数增强型基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "增强收益率": {
+                    "type": "float",
+                    "description": "指数增强型基金的收益率值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内各个指数增强型基金的增强收益率，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "增强收益率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询年度最大回撤",
+        "api_description": "这个API接口的功能是接收运算符、年度、和最大回撤值作为输入，返回在指定年度内满足最大回撤条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "最大回撤": {
+                    "type": "float",
+                    "description": "基金的最大回撤值，通常为负数，表示从峰值到谷底的最大下降幅度"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的年度，以便API能查询指定年度内每个基金的最大回撤，候选值为：2022、2021、2020、2019、2018、2017、2016、2015。"
+                }
+            },
+            "required": [
+                "运算符",
+                "最大回撤",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金事后分类",
+        "api_description": "这个API接口的功能是接收运算符和基金的事后分类作为输入，返回属于该事后分类的基金名称列表。事后分类指的是基金的投资风格和投资区域，通常由专业的评级机构在对基金的历史表现进行分析之后进行分类。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "事后分类": {
+                    "type": "string",
+                    "description": "基金的事后分类名称，可能的值包括稳健系列和浮动系列的不同子分类"
+                }
+            },
+            "required": [
+                "运算符",
+                "事后分类"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金资产打分",
+        "api_description": "这个API接口的功能是接收运算符和基金的资产打分作为输入，返回满足资产打分条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "资产打分": {
+                    "type": "float",
+                    "description": "基金的资产打分值"
+                }
+            },
+            "required": [
+                "运算符",
+                "资产打分"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金募集类型",
+        "api_description": "这个API接口的功能是接收运算符和基金的募集类型作为输入，返回属于该募集类型的基金列表。客户可通过此接口查询基金是公募型还是私募型。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "募集类型": {
+                    "type": "string",
+                    "description": "基金的募集类型，例如公募或私募"
+                }
+            },
+            "required": [
+                "运算符",
+                "募集类型"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询投组区域",
+        "api_description": "这个API接口的功能是接收运算符和投资组合区域作为输入，返回属于该区域的基金名称列表。用户可以通过这个接口查询特定投资区域的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "投组区域": {
+                    "type": "string",
+                    "description": "基金投资组合的地理区域名称"
+                }
+            },
+            "required": [
+                "运算符",
+                "投组区域"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金份额类型(A、B、C)",
+        "api_description": "这个API接口的功能是接收运算符和基金份额类型(如A、B、C等)作为输入，返回对应份额类型的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "份额类型": {
+                    "type": "string",
+                    "description": "基金份额类型，如A表示前收费，B表示后收费，C表示其他等"
+                }
+            },
+            "required": [
+                "运算符",
+                "份额类型"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询申购最小起购金额",
+        "api_description": "这个API接口的功能是接收运算符和最小起购金额作为输入，返回满足起购金额条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "起购金额": {
+                    "type": "float",
+                    "description": "指申购基金时的最小起购金额，用来筛选符合条件的基金"
+                }
+            },
+            "required": [
+                "运算符",
+                "起购金额"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询分红方式",
+        "api_description": "这个API接口的功能是根据运算符和分红方式作为输入，来筛选出具备指定分红方式的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "分红方式": {
+                    "type": "string",
+                    "description": "基金的分红方式，例如现金分红或红利再投资"
+                }
+            },
+            "required": [
+                "运算符",
+                "分红方式"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询赎回状态",
+        "api_description": "这个API接口的功能是接收运算符和赎回状态作为输入，返回当前满足指定赎回条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "赎回状态": {
+                    "type": "string",
+                    "description": "基金的赎回状态，接收的候选值为：可以赎回、不可赎回"
+                }
+            },
+            "required": [
+                "运算符",
+                "赎回状态"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询是否支持定投",
+        "api_description": "这个API接口的功能是接收运算符和定投支持情况作为输入，返回是否支持定期投资（定投）的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "定投支持情况": {
+                    "type": "string",
+                    "description": "基金的定期投资支持情况，候选值为：支持、不支持"
+                }
+            },
+            "required": [
+                "运算符",
+                "定投支持情况"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询单位净值同步日期",
+        "api_description": "这个API接口的功能是接收运算符和具体的日期作为输入，返回在该日期具有单位净值记录的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "日期": {
+                    "type": "string",
+                    "description": "单位净值记录的具体日期"
+                }
+            },
+            "required": [
+                "运算符",
+                "日期"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询单位净值",
+        "api_description": "这个API接口的功能是接收运算符和单位净值作为输入，返回满足单位净值条件的基金列表。用户可以通过这个接口筛选出具有特定净值范围的基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "单位净值": {
+                    "type": "float",
+                    "description": "基金的单位净值"
+                }
+            },
+            "required": [
+                "运算符",
+                "单位净值"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询基金经理任职期限",
+        "api_description": "这个API接口的功能是接收运算符和基金经理的任职期限信息作为输入，返回满足任职期限条件的基金经理列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "基金经理任职期限": {
+                    "type": "array",
+                    "description": "包含基金经理姓名和任职起止日期的数组，格式为[姓名#起始日期--终止日期]。终止日期可能是'至今'表示当前仍在任职。"
+                }
+            },
+            "required": [
+                "运算符",
+                "基金经理任职期限"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询近期夏普率",
+        "api_description": "这个API接口的功能是接收运算符、夏普率、时间作为输入，返回在指定时间内满足夏普率条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "夏普率": {
+                    "type": "float",
+                    "description": "基金的风险调整后收益率指标，用于评估基金承担每单位总风险的预期回报量"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间段，以便API能够查询指定时间段内每个基金的夏普率，候选值为：1个月、1年、3个月、6个月、成立以来。"
+                }
+            },
+            "required": [
+                "运算符",
+                "夏普率",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询投资市场",
+        "api_description": "这个API接口的功能是接收运算符和投资市场类别作为输入，返回属于该类别投资市场的基金名称。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "投资市场": {
+                    "type": "string",
+                    "description": "投资市场的类别"
+                }
+            },
+            "required": [
+                "运算符",
+                "投资市场"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询板块",
+        "api_description": "这个API接口的功能是接收运算符和板块名称作为输入，返回属于该板块的基金列表。用户可以通过这个接口筛选出特定板块领域的基金产品。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "板块名称": {
+                    "type": "string",
+                    "description": "板块名称，例如：种植业、家用轻工、房地产开发、饮料制造、高低压设备等"
+                }
+            },
+            "required": [
+                "运算符",
+                "板块名称"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询行业",
+        "api_description": "这个API接口的功能是根据运算符和行业名称作为输入参数，返回属于指定行业分类的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "行业": {
+                    "type": "string",
+                    "description": "需要查询的基金相关行业名称"
+                }
+            },
+            "required": [
+                "运算符",
+                "行业"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询聚类行业",
+        "api_description": "这个API接口的功能是接收运算符和行业名称作为输入，返回归属于该特定行业类别的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "行业": {
+                    "type": "string",
+                    "description": "基金所聚类的行业名称"
+                }
+            },
+            "required": [
+                "运算符",
+                "行业"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询管理费率",
+        "api_description": "这个API接口的功能是接收运算符和管理费率作为输入，返回满足指定管理费率条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "管理费率": {
+                    "type": "float",
+                    "description": "基金管理费率"
+                }
+            },
+            "required": [
+                "运算符",
+                "管理费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询销售服务费率",
+        "api_description": "这个API接口的功能是接收运算符和销售服务费率作为输入，返回满足指定销售服务费率条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "销售服务费率": {
+                    "type": "float",
+                    "description": "基金的销售服务费率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "销售服务费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询托管费率",
+        "api_description": "这个API接口的功能是接收运算符和托管费率作为输入，返回所有满足指定托管费率条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "托管费率": {
+                    "type": "float",
+                    "description": "基金的托管费率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "托管费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询认购费率",
+        "api_description": "这个API接口的功能是接收运算符和认购费率作为输入，返回满足指定认购费率条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "认购费率": {
+                    "type": "float",
+                    "description": "基金的认购费率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "认购费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询赎回费率",
+        "api_description": "这个API接口的功能是接收运算符和赎回费率作为输入，返回赎回费率满足输入条件的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "赎回费率": {
+                    "type": "float",
+                    "description": "基金的赎回费率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "赎回费率"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询分红年度",
+        "api_description": "这个API接口的功能是接收运算符和分红年度作为输入，返回在该指定年度进行分红的基金列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "年度": {
+                    "type": "float",
+                    "description": "基金分红的年份"
+                }
+            },
+            "required": [
+                "运算符",
+                "年度"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询权益登记日",
+        "api_description": "这个API接口的功能是接收运算符和指定的权益登记日作为输入，返回在该权益登记日有权益登记的基金信息。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "权益登记日": {
+                    "type": "float",
+                    "description": "基金权益登记的具体日期，格式为YYYYMMDD"
+                }
+            },
+            "required": [
+                "运算符",
+                "权益登记日"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询除息日",
+        "api_description": "这个API接口的功能是接收运算符和具体的除息日日期作为输入，返回在该日期进行除息的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "除息日": {
+                    "type": "float",
+                    "description": "基金除息的准确日期，格式为YYYYMMDD"
+                }
+            },
+            "required": [
+                "运算符",
+                "除息日"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询派息日",
+        "api_description": "这个API接口的功能是接收运算符和派息日作为输入，返回在该派息日或符合派息日条件的所有基金。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、等于、小于"
+                },
+                "派息日": {
+                    "type": "float",
+                    "description": "基金的派息日期，格式为YYYYMMDD，如20120302代表2012年3月2日"
+                }
+            },
+            "required": [
+                "运算符",
+                "派息日"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询红利再投日",
+        "api_description": "这个API接口的功能是接收运算符和特定日期作为输入，返回在该日期进行了红利再投的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "日期": {
+                    "type": "float",
+                    "description": "红利再投进行的具体日期，格式为YYYYMMDD"
+                }
+            },
+            "required": [
+                "运算符",
+                "日期"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "条件选基",
+        "api_name": "查询每十份收益单位派息（元）",
+        "api_description": "这个API接口的功能是接收运算符和每十份收益单位派息（元）作为输入，返回满足该派息条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "派息金额": {
+                    "type": "float",
+                    "description": "每十份基金收益单位派发的现金金额（元）"
+                }
+            },
+            "required": [
+                "运算符",
+                "派息金额"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询代码",
+        "api_description": "这个API接口的功能是接收标准基金名称作为输入，返回对应的具体基金代码。用户可以通过这个接口根据基金名称快速查询到具体的基金代码，然后进行后续的基金信息查询及操作。",
+        "parameters": {
+            "properties": {
+                "基金名称": {
+                    "type": "string",
+                    "description": "用户需要提供需要查询的基金名称，该名称应准确无误，以确保可以查到正确的基金代码。"
+                }
+            },
+            "required": [
+                "基金名称"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询类型",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金类型，比如“混合型”、“货币型”等。用户可以通过这个接口快速查询到具体基金的类型，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的格式，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询规模",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金规模，用户可以通过这个接口快速查询到具体基金的规模大小，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询晨星评级",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的晨星评级。晨星评级是一种评估基金综合实力的评级系统，对基金的业绩和风险进行综合评比，用星级表示，五星为最高，一星为最低。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询蚂蚁评级",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的蚂蚁评级。蚂蚁评级是一种评价基金业绩和风险的评估指标，用户可以通过这个接口了解到每个基金的业绩表现和风险水平。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询申购费率",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的申购费率。用户可以通过这个接口快速查询到具体基金的申购费率，以及进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询成立年限",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的成立年限。这个接口可以帮助用户了解基金的历史表现和稳定性，同时也可以作为评估基金管理人能力的一个参考。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询开放类型",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的开放类型，例如“开放型”、“封闭型”等。用户可以通过这个接口快速查询到具体基金的开放类型，以便进行进一步的基金选择和配置。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码对应了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的基金代码，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询申购状态",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金代码对应的基金申购状态，如“开放申购”、“暂停申购”等。通过这个接口，用户可以快速查询具体基金的申购状态，以进行投资决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询蚂蚁金选标识",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码是否被蚂蚁金服选中作为优选基金，从而帮助用户了解该基金在蚂蚁金服平台的评价和认可度。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询风险等级",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的风险等级，比如“低风险”、“中低风险”、“中风险”、“中高风险”、“高风险”。用户可以通过这个接口快速查询到具体基金的风险等级，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理类型",
+        "api_description": "这个API接口的功能是接收基金经理列表作为输入，返回每个基金经理类型。基金经理类型可能包括等。用户可以通过这个接口查询到基金经理的类型信息，以便更好的理解基金的风格和历史。",
+        "parameters": {
+            "properties": {
+                "基金经理列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金经理名称的数组"
+                }
+            },
+            "required": [
+                "基金经理列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金经理信息。用户可以通过这个接口快速查询到对应基金的经理是谁，了解基金经理的经验等信息，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的字串，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金公司",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金公司信息。用户可以通过这个接口快速查询到具体基金所属的基金公司，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理从业年限",
+        "api_description": "这个API接口的功能是接收基金经理列表作为输入，返回每个基金经理的从业年限。用户可以通过这个接口了解基金经理的经验老到，从而分析基金经理的管理能力。",
+        "parameters": {
+            "properties": {
+                "基金经理列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金经理名称的数组"
+                }
+            },
+            "required": [
+                "基金经理列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理管理规模",
+        "api_description": "这个API接口的功能是接收一组基金经理列表作为输入，返回每个基金经理管理的投资规模。用户可以通过这个接口了解基金经理管理的规模大小，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金经理列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金经理名称的数组"
+                }
+            },
+            "required": [
+                "基金经理列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理年化回报率",
+        "api_description": "这个API接口的功能是接收基金经理列表作为输入，返回每个基金经理的年化回报率。用户可以通过这个接口快速查询到具体基金经理的表现，从而进行进一步的投资决策。",
+        "parameters": {
+            "properties": {
+                "基金经理列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组。"
+                }
+            },
+            "required": [
+                "基金经理列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询持股估值",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的持股估值情况，其中包括每个基金持有的各个股票的估值，用户可以通过这个接口快速查询到具体基金的持股估值，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询持股集中度",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金的持股集中度。持股集中度是指基金的前十大重仓股票的市值占总净值的比例，它反映了基金持股的分散程度。用户可以通过这个接口快速查询到具体基金的持股集中度，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询持股热门度",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回这些基金的持股热门度。这是一个衡量基金投资组合中某只股票的认购程度的指标，以便用户了解基金持有的股票的市场热度。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询持股换手率",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的持股换手率。用户可以通过这个接口快速查询到基金持股的换手情况，该信息对于分析基金经理的操作风格和投资策略有一定参考价值。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询机构占比",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金中机构投资者的持股占比。用户可以通过这个接口了解到哪些基金受到机构投资者的青睐，从而作为投资决策的参考。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询单一持有人占比",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的单一持有人的持仓占比。用户可以通过这个接口快速查询到单一持有人的持仓情况，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询重仓股票",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金代码对应的重仓股票信息，包括股票代码、股票名称、持仓比例等。用户可以通过这个接口快速查询到具体基金的重仓股票，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询重仓行业",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的重仓行业，比如“信息技术”、“金融”等。用户可以通过这个接口快速查询到具体基金的重仓行业，了解基金关注的行业领域，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询持仓风格",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的持仓风格，如“大盘成长”、“大盘价值”等。用户可以通过这个接口快速查询和了解各基金的投资风格，以辅助投资决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金公司是否自购",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金公司是否有自购行为。用户可以通过这个接口快速了解基金公司对所管理基金的态度和信心。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询是否可投沪港深",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回该基金是否可以投资沪港深股票市场，即检查该基金是否有投资沪港深股票市场的权限。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近一年买入持有6个月历史盈利概率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回过去一年内，如果购买并持有6个月各个基金的历史盈利概率。该数据可以帮助用户衡量过去一年内购买并持有各个基金的风险和回报。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近3年买入持有1年历史盈利概率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金近三年内买入并持有一年后的历史盈利概率。这个数据可以帮助用户对基金的未来收益进行预测和评估。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近5年买入持有1年历史盈利概率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的近5年买入持有1年历史盈利概率",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期收益率",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的收益率。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回在这个时间段内每个基金的收益率，候选值为：今年来、6个月、3个月、1个月、1周、5年、3年、1年、昨日、成立以来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期收益率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回指定时间内基金的收益率在同类基金中的排名",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间内每个基金的收益率在同类基金中的排名，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期年化收益率",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金的近期年化收益率",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的年化收益率，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期年化收益率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金近期年化收益率在同类基金中的排名情况",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的年化收益率在同类基金中的排名情况，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期超大盘收益率",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间范围内的超大盘收益率。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的超大盘收益率，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来、2022、2021、2020、2019、2018、2017、2016、2015。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期创新高次数",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回每个基金在指定时间内创新高的次数",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的创新高次数，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期最大回撤",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的最大回撤信息",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的最大回撤信息，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期最大回撤同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的最大回撤同类排名",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间内对应基金的最大回撤同类排名，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期波动率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的波动率同类排名。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的波动率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期最长解套天数",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间段内最长的解套天数。解套天数表示该基金从亏损到盈利的时间长度。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间内每个基金最长的解套天数，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期跟踪误差",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的跟踪误差。跟踪误差反映的是基金实际收益和基金标杆（例如某个指数）收益之间的偏差，是评估基金管理人管理业绩的重要指标。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能计算并返回这个时间段内每个基金的跟踪误差，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期夏普比率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间段的夏普比率在同类基金中的排名。夏普比率是一个用于衡量基金风险调整后表现的重要指标，通过此接口，可以快速了解基金在同类型基金中的绩效排名。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的夏普比率排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期卡玛比率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的卡玛比率同类排名。卡玛比率是评价基金投资者在承受最大下跌幅度风险的前提下能获得的超额收益，所以，高卡玛比率基金被认为比低卡玛比率基金优秀。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的卡玛比率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期信息比率同类排名",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回该基金在指定时间内的信息比率在同类基金中的排名。信息比率是一种评价基金投资绩效的重要工具，它指的是基金收益相对于其风险的比例，值越大证明基金经理在承受一定风险的同时获得较高的超额收益。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的信息比率同类排名，候选值为：1年、3年、5年。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询年度收益率",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定年份作为输入，返回该年度下的基金收益率",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个基金的年度收益率，候选值为：2022、2021、2020、2019、2018、2017、2016、2015。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期指数增强",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定的时间作为输入，返回该期间内每个基金的指数增强表现",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间段内每个基金的指数增强表现，候选值为：1年、3年、5年、1周、1个月、3个月、6个月、今年来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询年度最大回撤",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定年份作为输入，返回在指定年份内，该基金的年度最大回撤指标。这一指标反映了该基金在一年内价格从最高点到最低点的最大跌幅，可以作为评估基金风险的一种参考数据。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的年份，以便API能计算并返回这个年份的每个基金的年度最大回撤，候选值为：2022、2021、2020、2019、2018、2017、2016、2015。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金事后分类",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的事后分类，如“大盘成长”、“小盘价值”等。用户可以通过这个接口了解基金在实际运作过程中的投资风格，从而作为投资决策的参考。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金资产打分",
+        "api_description": "这个API接口的功能是根据用户提供的基金代码列表，返回对应每个基金的资产打分。这个资产打分在投资决策中有里程碑式的意义，它综合了各种因素，如基金的回报情况、风险控制情况等，是投资者决定是否购买的重要依据。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金募集类型",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的募集类型，比如“公募”或“私募”。用户可以通过此接口快速查询到具体基金的募集类型，有助于用户在选择投资产品时，了解其运作方式和投资者范围。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的数字或字符组合，保证API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询投组区域",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金的投资区域（即该基金主要投资于哪个国家或地区的资产），这对理解基金的投资策略和风险特性非常有帮助。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金份额类型",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金代码对应的份额类型，包括A份额、B份额和C份额。通过查询基金的份额类型，用户可以了解基金的配置风格和投资策略，以及份额的购买和赎回政策等信息，从而实现基金的精细化决策和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金类型。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询申购最小起购金额",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的申购最小起购金额信息。用户可以通过这个接口快速查询到自己想申购的基金需要的最小起购金额，方便进行进一步的基金申购操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的代码，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询分红方式",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的分红方式，如“现金分红”、“份额分红”。用户可以通过这个接口快速查询到指定基金的分红方式，便于对基金进行进一步的分析和投资选择。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询赎回状态",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回基金的当前赎回状态，如是否可以赎回，赎回所需时间等。用户可以通过这个接口快速查询到具体基金的赎回状态，从而进行进一步的基金操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询是否支持定投",
+        "api_description": "这个API接口的功能是接收一个基金代码列表作为输入，返回每个基金代码对应的基金是否支持定投，即判断基金是否支持定期、定量投资。用户可以通过这个接口快速确认目标基金是否适合制定长期的定投计划。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询单位净值同步日期",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的最新的单位净值同步日期。用户可以通过这个接口快速查询到具体基金的单位净值同步信息，以便了解基金的最新情况。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询单位净值",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的单位净值。用户可以通过这个接口快速查询到具体基金的单位净值，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的代码，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询基金经理任职期限",
+        "api_description": "这个API接口的功能是接收一组基金经理列表作为输入，返回每个基金经理任职期限，用户可以通过这个接口了解基金经理的在职时长。",
+        "parameters": {
+            "properties": {
+                "基金经理列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金经理名称的数组"
+                }
+            },
+            "required": [
+                "基金经理列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询近期夏普率",
+        "api_description": "这个API接口的功能是接收基金代码列表和指定时间作为输入，返回每个基金在指定时间的夏普率。夏普率是一种衡量风险投资的质量，通过考虑资产的收益和风险。夏普比率越高，说明投资收益越好，风险越低。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间内每个基金的夏普率，候选值为：1个月、1年、3个月、6个月、成立以来。"
+                }
+            },
+            "required": [
+                "基金代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询投资市场",
+        "api_description": "这个API的功能是根据提供的基金代码列表，返回各个基金的投资市场信息，如“沪深300”、“中小创新”等。通过这个信息，用户可以了解基金的投资市场，以便进行深入的基金研究和决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询板块",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金代码对应的投资板块，如“经济板块”、“科技板块”等。用户可以通过这个接口查询自己感兴趣的基金所投资的板块，用于深入理解基金布局和资产配置。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询行业",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的基金投资行业分类。用户可以通过这个接口快速查询到具体基金的投资行业，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询聚类行业",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回这些基金主要投资的行业名称。用户可以通过这个接口快速确定基金的主要投资区域，从而对基金进行更加准确的评估和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询管理费率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回对应基金的管理费率。管理费率是指基金公司对基金资产进行投资管理所收取的费用，用户可以通过这个接口快速查询到具体基金的管理费率，以供投资决策参考。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询销售服务费率",
+        "api_description": "这个API接口的功能是接收一个或多个基金代码作为输入，返回每个基金的销售服务费率。销售服务费率是基金购买时支付的费用，其大小会直接影响到投资者的实际投资成本。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询托管费率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金对应的托管费率。这个信息可以帮助用户了解每个基金的额外费用，从而进行更全面的基金投资决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询认购费率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的认购费率，认购费率是指基金认购时需要支付的费用与认购金额的百分比。通过这个接口，用户可以得知具体基金的认购费率，从而能更准确的计算成本，进行投资决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询赎回费率",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金对应的赎回费率信息。用户可以通过此接口查询到具体基金的赎回费率，这对于计算投资成本具有重要参考意义。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询分红年度",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的分红年度。用户可以通过这个接口快速了解到具体基金的分红情况，从而进行进一步的基金分析和操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询权益登记日",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的权益登记日。用户可以通过这个接口快速查询到具体基金的权益登记日，以便确定自身权益的范围和时间。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询除息日",
+        "api_description": "这个API接口的功能是接收一个基金代码列表作为输入，返回这些基金的除息日信息。除息日是指基金从股息中除去的那一天，从那一天开始，购买该基金的投资者将不再享受之前的红利。通过查询基金的除息日，用户可以了解到基金之前分红的记录，有助于做出投资决策。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金的除息日。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别的代码，确保API能正确返回除息日的数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询派息日",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的派息日。用户可以通过该接口了解基金的派息时间，以便进行基金的购买或卖出等操作。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询红利再投日",
+        "api_description": "这个API接口的功能是接收基金代码列表作为输入，返回每个基金的红利再投日，也就是确认基金红利再投资的日期。对于参与红利再投资的投资者来说，查询红利再投资日期非常重要，因为这是他们得到收益的日期。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "基金",
+        "tool_name": "基金查询",
+        "api_name": "查询每十份收益单位派息（元）",
+        "api_description": "这个API接口的功能是接收一组基金代码列表作为输入，返回每个基金代码对应的每十份收益单位派息值（单位：元）。通过该接口，用户能快速查询到特定基金的派息情况，帮助用户了解基金的收益分配情况。",
+        "parameters": {
+            "properties": {
+                "基金代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个基金代码的数组，每个基金代码指定了用户想查询的具体基金。这个列表是API的输入数据，每个基金代码应该是一个有效且可识别，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "基金代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询代码",
+        "api_description": "这个API接口的功能是接收运算符和股票代码作为输入，返回符合该代码条件的股票名称。用户可以通过这个接口查询特定股票代码所对应的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“等于”"
+                },
+                "股票代码": {
+                    "type": "string",
+                    "description": "标准格式的股票代码，例如688232.SH、002489.SZ等"
+                }
+            },
+            "required": [
+                "运算符",
+                "股票代码"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询开盘价",
+        "api_description": "这个API接口的功能是接收运算符、一定的开盘价、时间作为输入，返回在指定时间内满足开盘价条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "开盘价": {
+                    "type": "float",
+                    "description": "股票的开盘价格"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能获取指定时间区间的开盘价格信息，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "开盘价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询最高价",
+        "api_description": "这个API接口的功能是接收运算符、最高价、时间作为输入，返回在指定时间段内满足最高价条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "最高价": {
+                    "type": "float",
+                    "description": "股票的最高交易价格"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询股票的时间段。可接受的候选值有：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "最高价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询最低价",
+        "api_description": "这个API接口的功能是接收运算符、最低价、时间作为输入，返回在指定时间内满足最低价条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "最低价": {
+                    "type": "float",
+                    "description": "股票最低价值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内股票的最低价，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "最低价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询当前价",
+        "api_description": "这个API接口的功能是接收运算符和当前价格作为输入，返回符合这个价格条件的股票列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "当前价": {
+                    "type": "float",
+                    "description": "股票的当前交易价格"
+                }
+            },
+            "required": [
+                "运算符",
+                "当前价"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询收盘价",
+        "api_description": "这个API接口的功能是接收运算符、某个具体的收盘价数值、时间为输入条件，返回在指定时间内收盘价符合该条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "收盘价": {
+                    "type": "float",
+                    "description": "股票的收盘价数值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询指定时间段内股票的收盘价，候选值为：今日、昨日、上周。"
+                }
+            },
+            "required": [
+                "运算符",
+                "收盘价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询成交量",
+        "api_description": "这个API接口的功能是接收运算符、成交量、时间作为输入，返回在指定时间内满足成交量条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "成交量": {
+                    "type": "integer",
+                    "description": "股票成交量，为一个整数"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询在指定时间内的股票成交量，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "成交量",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询成交额",
+        "api_description": "这个API接口的功能是接收运算符、成交额、时间作为输入，返回在指定时间内满足成交额条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为：大于、小于、等于"
+                },
+                "成交额": {
+                    "type": "float",
+                    "description": "股票的成交额值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间段，以便API能查询到指定时间段内股票的成交额信息，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "成交额",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询涨停价",
+        "api_description": "这个API接口的功能是接收运算符、涨停价、时间作为输入，返回在特定交易日涨停价符合条件的股票列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下候选值为：等于、不等于、大于、小于"
+                },
+                "涨停价": {
+                    "type": "float",
+                    "description": "股票涨停价格值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的交易日，以便API能查询当日股票的涨停价，候选值为：今日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "涨停价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询跌停价",
+        "api_description": "这个API接口的功能是接收运算符、跌停价和时间（今日）作为输入，返回在当日触及跌停价格条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是等于"
+                },
+                "跌停价": {
+                    "type": "float",
+                    "description": "股票的跌停价格"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义用户想要查询的时间，API将查询在指定时间（今日）内触及跌停价的股票列表，候选值为：今日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "跌停价",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询涨跌额",
+        "api_description": "这个API接口的功能是接收运算符、涨跌额、时间作为输入，返回在指定时间内满足涨跌额条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值包含大于、小于、等于"
+                },
+                "涨跌额": {
+                    "type": "float",
+                    "description": "股票涨跌额值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询指定时间段内股票的涨跌额情况，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "运算符",
+                "涨跌额",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询涨跌幅",
+        "api_description": "该API接口的功能是根据用户输入的运算符、涨跌幅值和指定时间，返回在该时间段内满足涨跌幅条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为：大于、小于、等于"
+                },
+                "涨跌幅": {
+                    "type": "float",
+                    "description": "涨跌幅值，为股票在指定时间内的价格变动比率"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "查询涨跌幅的参考时间，用户可指定不同的时间单位进行查询，候选值为：今日、昨日、上周、上月、1个月、3个月、6个月、1年、3年、今年来"
+                }
+            },
+            "required": [
+                "运算符",
+                "涨跌幅",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询换手率",
+        "api_description": "这个API接口的功能是接收运算符和换手率作为输入，返回满足换手率条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "换手率": {
+                    "type": "float",
+                    "description": "股票换手率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "换手率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询每股收益",
+        "api_description": "这个API接口的功能是接收运算符和每股收益(EPS)值作为输入，返回满足指定每股收益条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "每股收益": {
+                    "type": "float",
+                    "description": "股票每股收益值"
+                }
+            },
+            "required": [
+                "运算符",
+                "每股收益"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询静态市盈率",
+        "api_description": "这个API接口的功能是接收运算符和静态市盈率作为输入，返回满足条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "静态市盈率": {
+                    "type": "float",
+                    "description": "指定股票的静态市盈率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "静态市盈率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总市值",
+        "api_description": "这个API接口的功能是接收运算符和总市值作为输入，返回满足条件的具有指定总市值范围的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "总市值": {
+                    "type": "float",
+                    "description": "股票的总市值"
+                }
+            },
+            "required": [
+                "运算符",
+                "总市值"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询振幅",
+        "api_description": "这个API接口的功能是接收运算符和股票振幅值作为输入，返回在不同时间段内具有指定振幅条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "振幅": {
+                    "type": "float",
+                    "description": "股票的振幅值"
+                }
+            },
+            "required": [
+                "运算符",
+                "振幅"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询流通市值",
+        "api_description": "这个API接口的功能是接收运算符和流通市值作为输入，返回在指定运算条件下满足流通市值要求的股票名称。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为大于、小于、等于"
+                },
+                "流通市值": {
+                    "type": "float",
+                    "description": "股票的流通市值"
+                }
+            },
+            "required": [
+                "运算符",
+                "流通市值"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询每股收益ttm",
+        "api_description": "这个API接口的功能是接收运算符和每股收益ttm(twelve trailing months)的值作为输入，返回符合条件的股票名称。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "每股收益ttm": {
+                    "type": "float",
+                    "description": "股票的每股收益ttm值"
+                }
+            },
+            "required": [
+                "运算符",
+                "每股收益ttm"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询市盈率ttm",
+        "api_description": "这个API接口的功能是接收运算符和市盈率ttm作为输入，返回满足市盈率ttm条件的股票名称列表。用户可以通过这个接口筛选出特定市盈率水平的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "市盈率ttm": {
+                    "type": "float",
+                    "description": "市盈率ttm值"
+                }
+            },
+            "required": [
+                "运算符",
+                "市盈率ttm"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净资产收益率",
+        "api_description": "这个API接口的功能是接收运算符和净资产收益率作为输入，返回满足净资产收益率条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净资产收益率": {
+                    "type": "float",
+                    "description": "股票的净资产收益率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "净资产收益率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询每股净资产",
+        "api_description": "这个API接口的功能是接收运算符和每股净资产数值，根据提供的运算符返回满足条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "每股净资产": {
+                    "type": "float",
+                    "description": "指定每股净资产的数值"
+                }
+            },
+            "required": [
+                "运算符",
+                "每股净资产"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询每股经营性现资金流",
+        "api_description": "这个API接口的功能是接收运算符和每股经营性现金流值作为输入，返回满足特定经营性现金流条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "每股经营性现资金流": {
+                    "type": "float",
+                    "description": "每股经营性现金流的数值"
+                }
+            },
+            "required": [
+                "运算符",
+                "每股经营性现资金流"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询毛利率",
+        "api_description": "这个API接口的功能是根据运算符和毛利率值作为输入，返回满足条件的股票名称列表。用户可以通过这个接口查询特定毛利率范围的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "毛利率": {
+                    "type": "float",
+                    "description": "股票的毛利率值"
+                }
+            },
+            "required": [
+                "运算符",
+                "毛利率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净利率",
+        "api_description": "这个API接口的功能是接收运算符和净利率作为输入，返回满足净利率条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净利率": {
+                    "type": "float",
+                    "description": "股票的净利率"
+                }
+            },
+            "required": [
+                "运算符",
+                "净利率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净利润",
+        "api_description": "这个API接口的功能是接收运算符和净利润值作为输入，返回符合净利润条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值可以是大于、小于或等于"
+                },
+                "净利润": {
+                    "type": "float",
+                    "description": "股票的净利润"
+                }
+            },
+            "required": [
+                "运算符",
+                "净利润"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净利润同比增长",
+        "api_description": "这个API接口的功能是接收运算符和净利润同比增长率作为输入，返回满足净利润同比增长条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净利润同比增长": {
+                    "type": "float",
+                    "description": "股票的净利润同比增长率"
+                }
+            },
+            "required": [
+                "运算符",
+                "净利润同比增长"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询营业收入",
+        "api_description": "这个API接口的功能是接收运算符和营业收入值作为输入，返回满足条件的股票名称。该接口可用于筛选出在特定营业收入参数范围内的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "营业收入": {
+                    "type": "float",
+                    "description": "股票的营业收入值"
+                }
+            },
+            "required": [
+                "运算符",
+                "营业收入"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询营收同比增长",
+        "api_description": "这个API接口的功能是接收运算符和营收同比增长率作为输入，返回满足指定增长率条件的股票列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "营收同比增长率": {
+                    "type": "float",
+                    "description": "股票的营收同比增长率"
+                }
+            },
+            "required": [
+                "运算符",
+                "营收同比增长率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询投资收入",
+        "api_description": "这个API接口的功能是接收运算符和投资收入作为输入，返回满足投资收入条件的股票名称。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "投资收入": {
+                    "type": "float",
+                    "description": "股票的投资收入金额"
+                }
+            },
+            "required": [
+                "运算符",
+                "投资收入"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询营业利润",
+        "api_description": "这个API接口的功能是接收运算符和股票的营业利润作为输入，返回满足营业利润条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "营业利润": {
+                    "type": "float",
+                    "description": "股票的营业利润金额"
+                }
+            },
+            "required": [
+                "运算符",
+                "营业利润"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询营业利润同比增长",
+        "api_description": "这个API接口的功能是接收运算符和营业利润同比增长率作为输入，返回满足该增长率条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "营业利润同比增长率": {
+                    "type": "float",
+                    "description": "营业利润同比增长率，表示与去年同期相比的营业利润增长比例"
+                }
+            },
+            "required": [
+                "运算符",
+                "营业利润同比增长率"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询扣非净利润",
+        "api_description": "这个API接口的功能是接收运算符和扣非净利润值作为输入，返回满足指定扣非净利润条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "扣非净利润": {
+                    "type": "float",
+                    "description": "股票扣除非经常性损益后的净利润值"
+                }
+            },
+            "required": [
+                "运算符",
+                "扣非净利润"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询流动资产",
+        "api_description": "这个API接口的功能是接收运算符和流动资产值作为输入，返回满足流动资产条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "流动资产": {
+                    "type": "float",
+                    "description": "股票的流动资产值"
+                }
+            },
+            "required": [
+                "运算符",
+                "流动资产"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总资产",
+        "api_description": "这个API接口的功能是接收运算符和总资产数值作为输入，返回满足总资产条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值包括：大于、小于、等于"
+                },
+                "总资产": {
+                    "type": "float",
+                    "description": "基金的总资产数值"
+                }
+            },
+            "required": [
+                "运算符",
+                "总资产"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询短期负债",
+        "api_description": "这个API接口的功能是接收运算符和短期负债额作为输入，返回满足短期负债条件的公司股票列表。短期负债指的是一年或者营业周期内到期的债务。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "短期负债": {
+                    "type": "float",
+                    "description": "公司的短期负债额，即一年或者营业周期内到期的债务金额"
+                }
+            },
+            "required": [
+                "运算符",
+                "短期负债"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总负债",
+        "api_description": "这个API接口的功能是接收运算符和总负债金额作为输入，返回满足总负债条件的股票名称或代码。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "总负债金额": {
+                    "type": "float",
+                    "description": "公司的总负债金额"
+                }
+            },
+            "required": [
+                "运算符",
+                "总负债金额"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询股东权益",
+        "api_description": "这个API接口的功能是接收运算符和股东权益数值作为输入，返回满足条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "股东权益": {
+                    "type": "float",
+                    "description": "股东的权益数值"
+                }
+            },
+            "required": [
+                "运算符",
+                "股东权益"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净经营性现金流",
+        "api_description": "这个API接口的功能是接收运算符和净经营性现金流值作为输入，返回符合这一条件的公司股票名称。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净经营性现金流": {
+                    "type": "float",
+                    "description": "公司的净经营性现金流值"
+                }
+            },
+            "required": [
+                "运算符",
+                "净经营性现金流"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净投资性现金流",
+        "api_description": "这个API接口的功能是接收运算符和净投资性现金流作为输入，返回与给定净投资性现金流条件相匹配的股票名称列表。用户可以通过这个接口筛选特定现金流水平的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净投资性现金流": {
+                    "type": "float",
+                    "description": "股票的净投资性现金流值"
+                }
+            },
+            "required": [
+                "运算符",
+                "净投资性现金流"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询净融资性现金流",
+        "api_description": "这个API接口的功能是接收运算符和净融资性现金流作为输入，返回符合条件的股票名称列表。净融资性现金流是指公司在报告期内通过融资活动产生的现金流量净额。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "净融资性现金流": {
+                    "type": "float",
+                    "description": "股票的净融资性现金流值"
+                }
+            },
+            "required": [
+                "运算符",
+                "净融资性现金流"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询流通股本",
+        "api_description": "这个API接口的功能是接收运算符和流通股本数量作为输入，返回符合条件的股票名称列表。用户可以通过这个接口查询不同市值范围内的股票。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值为大于、小于、等于"
+                },
+                "流通股本": {
+                    "type": "float",
+                    "description": "公司的流通股本数量"
+                }
+            },
+            "required": [
+                "运算符",
+                "流通股本"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总股本",
+        "api_description": "这个API接口的功能是接收运算符和总股本数值作为输入，返回满足指定总股本条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "总股本": {
+                    "type": "float",
+                    "description": "股票的总股本数量，单位通常是股"
+                }
+            },
+            "required": [
+                "运算符",
+                "总股本"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询主力资金流入",
+        "api_description": "这个API接口的功能是接收运算符、主力资金流入额、时间作为输入参数，返回在指定时间内满足主力资金流入条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "主力资金流入": {
+                    "type": "float",
+                    "description": "股票主力资金流入额度"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询主力资金流入情况的时间范围，候选值为：今日、10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "主力资金流入",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询主力资金流出",
+        "api_description": "这个API接口的功能是接收运算符、主力资金流出值、时间作为输入，返回在指定时间内满足主力资金流出条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "主力资金流出": {
+                    "type": "float",
+                    "description": "股票主力资金流出值，表示在某时间段内主力资金的流出量（即资金净流出额）"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数限定了用户想要查询的时间，API将返回选定时间（今日）内满足主力资金流出条件的股票列表，候选值为：今日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "主力资金流出",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询主力资金净流入",
+        "api_description": "这个API接口的功能是接收运算符、主力资金净流入额、时间作为输入，返回在指定时间内满足主力资金净流入条件的股票列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "主力资金净流入": {
+                    "type": "float",
+                    "description": "股票主力资金净流入额"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能查询指定时间段内的股票主力资金净流入情况，候选值为：今日、10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "主力资金净流入",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总流入",
+        "api_description": "这个API接口的功能是接收运算符、总流入金额、时间作为输入，返回在指定时间内的满足总流入金额条件的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "总流入金额": {
+                    "type": "float",
+                    "description": "指定时间段内的股票总流入金额值"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的特定时间段，以便API能查询指定时间段内股票的总流入金额，候选值为：10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "总流入金额",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询总流出",
+        "api_description": "这个API接口的功能是接收运算符、总流出金额、时间作为输入，返回在指定时间内满足总流出金额条件的基金名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，候选值是大于、小于、等于"
+                },
+                "总流出金额": {
+                    "type": "float",
+                    "description": "基金的总流出金额"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间范围，以便API能查询指定时间段内的基金总流出金额，候选值为：10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "运算符",
+                "总流出金额",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "条件选股",
+        "api_name": "查询高管名称",
+        "api_description": "这个API接口的功能是接收运算符和高管名称作为输入，返回与高管名称条件相符的股票名称列表。",
+        "parameters": {
+            "properties": {
+                "运算符": {
+                    "type": "string",
+                    "description": "运算符号，该api下固定为“包含”"
+                },
+                "高管名称": {
+                    "type": "string",
+                    "description": "高级管理人员的姓名"
+                }
+            },
+            "required": [
+                "运算符",
+                "高管名称"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询代码",
+        "api_description": "这个API接口的功能是接收一组标准股票名称作为输入，返回每个股票名称对应的股票代码。这个API有助于用户通过股票名称找到对应的股票代码，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票名称列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票名称的数组，每个股票名称指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票名称应该是有效且可识别的，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票名称列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询开盘价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票在指定时间的开盘价。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API返回在这个时间股票的开盘价，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询最高价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票某个时间的最高价",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的最高价，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询最低价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票某个时间的最低价",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的最低价，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询当前价",
+        "api_description": "这个API接口的功能是接收股票代码列表作为输入，返回该股票的当前价格。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询收盘价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票某个时间的收盘价",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能算出并返回这个时间每个股票的收盘价，候选值为：今日、昨日、上周。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询成交量",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回每个股票在指定时间的成交量。用户可以通过这个接口快速查询到具体股票的成交量，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回在这个时间内每个股票的成交量，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询成交额",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入参数，返回某一指定时间的股票的成交额。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，以确保API能够准确地返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的成交额，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询涨停价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票当天的涨停价",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的涨停价，候选值为：今日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询跌停价",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票某个时间的跌停价",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能提供这个时间股票的跌停价，候选值为：今日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询涨跌额",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该指定时间内股票的涨跌额。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，以便API能正确返回所需的涨跌额数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间对应股票的涨跌额，候选值为：今日、昨日、上周、上月。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询涨跌幅",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票在指定时间段的涨跌幅",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间段，以便API能计算并返回这个时间段内每个股票的涨跌幅，候选值为：今日、昨日、上周、上月、1个月、3个月、6个月、1年、3年、今年来。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询换手率",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的换手率。用户可以通过这个接口快速查询到具体股票的换手率，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询每股收益",
+        "api_description": "这个API接口的功能是接收股票代码列表作为输入，返回股票的每股收益信息。用户可以通过这个接口快速查询到具体股票的每股收益，以便进行投资分析和决策。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询静态市盈率",
+        "api_description": "这个API接口的功能是接收一个股票代码列表作为输入，返回每个股票代码对应的静态市盈率。静态市盈率是公司市值与净利润的比率，是判断一家公司是否被高估或低估的重要指标，用户可以通过这个接口快速查询到具体股票的静态市盈率，对投资决策进行更好的指导。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总市值",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的总市值。用户可以通过这个接口快速查询到具体股票的总市值，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询振幅",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的振幅。振幅代表股票在交易过程中价格变动的幅度，能够反映出市场对于某种股票的热度和炒作程度，是一个十分重要的技术指标。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询流通市值",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的流通市值。用户可以通过这个接口快速查询到具体股票的流通市值，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询每股收益ttm",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，提供每个股票代码的每股收益ttm（过去的12个月内每份股票的收益）信息。用户可以通过这个接口快速查询到具体股票的ttm值，从而对公司的盈利能力进行评估，这是投资决策的重要依据。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询市盈率ttm",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的市盈率ttm。用户可以通过这个接口快速查询到具体股票的市盈率ttm(过去十二个月市盈率)，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净资产收益率",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净资产收益率。用户可以通过这个接口快速查询到具体股票的净资产收益率，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询每股净资产",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的每股净资产。用户可以通过这个接口快速查询到具体股票的每股净资产，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询每股经营性现金流",
+        "api_description": "这个API接口的功能是接收一个股票代码列表作为输入，返回每个股票代码对应的每股经营性现金流。用户可以通过这个接口快速获取到自己关注的股票的经营性现金流情况，以便进行进一步的股票分析和投资决策。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API输入数据，每个股票代码应该是有效且可识别的，以确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询毛利率",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的毛利率。用户可以通过这个接口快速查询到具体股票的毛利率，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净利率",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净利率信息。用户可以通过这个接口快速查询到具体股票的净利率，对于投资决策的制定具有重要的参考价值。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净利润",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净利润。用户可以通过这个接口快速查询到具体股票的净利润，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净利润同比增长",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净利润同比增长。用户可以通过这个接口快速查询到具体股票的净利润同比增长，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询营业收入",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的最近期的营业收入数据。用户可以通过这个接口快速查询到具体股票的营业收入，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询营收同比增长",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的营收同比增长。用户可以通过这个接口快速查询到具体股票的营收同比增长，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询投资收入",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的投资收入。用户可以通过这个接口快速查询到具体股票的投资收入，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询营业利润",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的营业利润。用户可以通过这个接口快速查询到具体股票的营业利润，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询营业利润同比增长",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的营业利润同比增长。用户可以通过这个接口快速查询到具体股票的营业利润同比增长，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询扣非净利润",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的扣非净利润。用户可以通过这个接口快速查询到具体股票的扣非净利润，从而进行更深入的财务分析。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询流动资产",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的流动资产。用户可以通过这个接口快速查询到具体股票的流动资产，从而进行财务分析。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总资产",
+        "api_description": "此API接口的主要功能是接收股票代码列表作为输入并返回每个股票代码对应的总资产。用户可以利用此接口查看具体股票的总资产，这将对股票分析和持有的决策做出有用的指导。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户的目标查询股票。数组是此API的输入数据，需要保证每一个股票代码是有效并能被系统识别的，以便API能正确返回所需的信息。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询短期负债",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的短期负债信息。短期负债是公司在一年内需要偿还的负债，是企业财务分析的重要指标。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总负债",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的总负债。用户可以通过这个接口快速查询到具体股票的总负债，便于做进一步的财务风险分析。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询股东权益",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的股东权益信息。深入了解个股的股东权益有助于投资者更全面地理解股票的价值。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净经营性现金流",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净经营性现金流。用户可以通过这个接口快速查询到具体股票的净经营性现金流，以此了解公司的经营状况和盈利能力。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净投资性现金流",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净投资性现金流。用户可以通过这个接口快速查询到具体股票的净投资性现金流，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询净融资性现金流",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的净融资性现金流。净融资性现金流是评价公司融资活动是否得当的重要指标，用户可以通过此接口快速查询到所关注的股票的净融资性现金流，进而进行有针对性的投资分析和决策。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询银行资本充足率",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应银行的资本充足率。用户可以通过这个接口快速查询到具体银行股票的资本充足率，从而进行进一步的股票分析和投资决策。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个银行股票代码的数组，每个股票代码指定了用户想查询的具体银行。这个列表是API的输入数据，每个银行股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询流通股本",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回每个股票代码对应的流通股本数量。用户可以通过这个接口快速查询到具体股票的流通股本数量，从而进行进一步的股票分析和操作。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总股本",
+        "api_description": "这个API接口的功能是接收股票代码列表作为输入，返回每个股票的总股本。用户可以通过这个接口快速查询到具体股票的股权结构，对于投资者来说，了解公司的总股本可以帮助他们分析公司的股权结构，并为投资决策提供参考。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询主力资金流入",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票在指定时间内的主力资金流入情况",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的主力资金流入情况，候选值为：今日、3日、5日、10日、20日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询主力资金流出",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票在某个时间内的主力资金流出情况。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间指定股票的主力资金流出情况，候选值为：今日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询主力资金净流入",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回该股票在指定时间内的主力资金净流入",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的主力资金净流入，候选值为：今日、10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总流入",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回在指定时间内每个股票的资金总流入",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间内每个股票的资金总流入，候选值为：10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询总流出",
+        "api_description": "这个API接口的功能是接收股票代码列表和指定时间作为输入，返回指定时间内该股票的总流出。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                },
+                "时间": {
+                    "type": "string",
+                    "description": "此参数定义了用户想要查询的时间，以便API能计算并返回这个时间每个股票的总流出，候选值为：10日、20日、3日、5日。"
+                }
+            },
+            "required": [
+                "股票代码列表",
+                "时间"
+            ]
+        }
+    },
+    {
+        "category_name": "股票",
+        "tool_name": "股票查询",
+        "api_name": "查询高管名称",
+        "api_description": "这个API接口的功能是接收一组股票代码列表作为输入，返回这些股票对应的高管名称列表。用户可以通过此接口方便快速地查询到所关注股票的高级管理人员的姓名信息，有助于他们进行进一步的投资决策。",
+        "parameters": {
+            "properties": {
+                "股票代码列表": {
+                    "type": "list",
+                    "description": "用户需要提供一个包含一个或多个股票代码的数组，每个股票代码指定了用户想查询的具体股票。这个列表是API的输入数据，每个股票代码应该是有效且可识别的，确保API能正确返回所需数据。"
+                }
+            },
+            "required": [
+                "股票代码列表"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "数值计算",
+        "api_name": "加法计算",
+        "api_description": "这个API接口的功能是接收两个数作为输入，返回两数之和。",
+        "parameters": {
+            "properties": {
+                "被加数": {
+                    "type": "float",
+                    "description": "被加数"
+                },
+                "加数": {
+                    "type": "float",
+                    "description": "加数"
+                }
+            },
+            "required": [
+                "被加数",
+                "加数"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "数值计算",
+        "api_name": "减法计算",
+        "api_description": "这个API接口的功能是接收两个数作为输入，返回两数之差。",
+        "parameters": {
+            "properties": {
+                "被减数": {
+                    "type": "float",
+                    "description": "被减数"
+                },
+                "减数": {
+                    "type": "float",
+                    "description": "减数"
+                }
+            },
+            "required": [
+                "被减数",
+                "减数"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "数值计算",
+        "api_name": "乘法计算",
+        "api_description": "这个API接口的功能是接收两个数作为输入，返回两数之积。",
+        "parameters": {
+            "properties": {
+                "被乘数": {
+                    "type": "float",
+                    "description": "被乘数"
+                },
+                "乘数": {
+                    "type": "float",
+                    "description": "乘数"
+                }
+            },
+            "required": [
+                "被乘数",
+                "乘数"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "数值计算",
+        "api_name": "除法计算",
+        "api_description": "这个API接口的功能是接收两个数作为输入，返回被除数/除数的结果。",
+        "parameters": {
+            "properties": {
+                "被除数": {
+                    "type": "float",
+                    "description": "被除数"
+                },
+                "除数": {
+                    "type": "float",
+                    "description": "除数"
+                }
+            },
+            "required": [
+                "被除数",
+                "除数"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "逻辑计算",
+        "api_name": "与计算",
+        "api_description": "这个API接口的功能是接收两个列表作为输入，返回取交集的列表。",
+        "parameters": {
+            "properties": {
+                "列表1": {
+                    "type": "list",
+                    "description": "列表1"
+                },
+                "列表2": {
+                    "type": "list",
+                    "description": "列表2"
+                }
+            },
+            "required": [
+                "列表1",
+                "列表2"
+            ]
+        }
+    },
+    {
+        "category_name": "通用",
+        "tool_name": "逻辑计算",
+        "api_name": "或计算",
+        "api_description": "这个API接口的功能是接收两个列表作为输入，返回取并集的列表。",
+        "parameters": {
+            "properties": {
+                "列表1": {
+                    "type": "list",
+                    "description": "列表1"
+                },
+                "列表2": {
+                    "type": "list",
+                    "description": "列表2"
+                }
+            },
+            "required": [
+                "列表1",
+                "列表2"
+            ]
+        }
+    }
+]
