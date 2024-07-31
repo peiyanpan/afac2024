@@ -10,7 +10,7 @@
 ## 模型下载
 
 ```bash
-cd model
+cd models
 git lfs install
 git clone https://www.modelscope.cn/qwen/Qwen-14B.git
 ```
