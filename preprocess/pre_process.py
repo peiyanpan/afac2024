@@ -37,7 +37,7 @@ class CreateTrainData:
         self.save_keywords(self.simple_name_out_jsonl)  # 保存关键词到文件
 
     def df_2_json(self, df, json_file):
-        with open(json_file, 'w') as m:
+        with open(json_file, 'w',encoding='utf-8') as m:
             for index, row in tqdm(df.iterrows(), total=df.shape[0]):
                 query = row['query']
                 if "哪些" not in query:
@@ -73,6 +73,6 @@ class CreateTrainData:
                 m.write(json.dumps(single_data, ensure_ascii=False) + '\n')
 
     def save_keywords(self, json_file):
-        with open(json_file, 'w') as f:
+        with open(json_file, 'w',encoding='utf-8') as f:
             for keyword in self.keywords:
                 f.write(json.dumps({"简称": keyword}, ensure_ascii=False) + '\n')
