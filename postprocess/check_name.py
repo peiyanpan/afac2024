@@ -82,13 +82,3 @@ def save_processed_jsonl(data, output_file):
         for item in data:
             f.write(item + '\n')
 
-# 处理文件并保存结果
-input_file = '../result/tmp41.jsonl'
-output_file = 'try_tmp40.jsonl'
-standard_names_excel = '../data-0520/标准名.xlsx'
-dictionary_file = 'correspondent.jsonl'
-
-standard_names_set = read_standard_names_from_excel(standard_names_excel)
-dictionary = read_dictionary(dictionary_file)
-processed_data = process_jsonl_file(input_file, standard_names_set, dictionary)
-save_processed_jsonl(processed_data, output_file)
