@@ -22,7 +22,7 @@ torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --m
     --optim adamw_torch \
     --packing False \
     --report_to none \
-    --output_dir saves/Qwen1.5-14B/full/train_output \
+    --output_dir saves/train_output \
     --bf16 True \
     --plot_loss True \
     --ddp_timeout 180000000 \
