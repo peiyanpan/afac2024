@@ -18,7 +18,7 @@ train_out_excel = "../data-0520/train_add2000.xlsx"
 train_jsonl= './tmp_data/train.jsonl'
 dev_jsonl =  './tmp_data/dev.jsonl'
 test_jsonl = './tmp_data/test.jsonl'
-simple_name_jsonl = '../tmp_data/simple_name.jsonl'
+simple_name_jsonl = 'tmp_data/simple_name.jsonl'
 
 train_json = '../ptuning/data/train.json'
 test_json =  '../ptuning/data/test.json'
