@@ -7,12 +7,20 @@
 `./src`存放模型训练和推理代码  
 
 
+## 模型下载
+
+```bash
+cd model
+git lfs install
+git clone https://www.modelscope.cn/qwen/Qwen-14B.git
+```
+
 ## 训练
 
 ```bash
 bash train.sh
 ```
-训练后的模型保存在`./saves/Qwen1.5-14B/full/train_output`
+训练后的模型保存在`./saves/train_output`
 
 
 ## 推理
@@ -20,4 +28,4 @@ bash train.sh
 ```bash
 bash test.sh
 ```
-推理结果保存在`./saves/Qwen1.5-14B/full/eval_output`
+推理结果保存在`./saves/eval_output`

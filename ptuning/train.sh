@@ -1,7 +1,7 @@
-torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --master_port 28327 src/llamafactory/launcher.py \
+torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --master_port 28327 src/launcher.py \
     --stage sft \
     --do_train True \
-    --model_name_or_path /home/user/wjs/LLaMA-Factory/models/Qwen1.5-14B \
+    --model_name_or_path model/Qwen1.5-14B \
     --preprocessing_num_workers 16 \
     --finetuning_type full \
     --template default \

@@ -1,4 +1,4 @@
-torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --master_port 28327 src/llamafactory/launcher.py \
+torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --master_port 28327 src/launcher.py \
     --stage sft \
     --model_name_or_path saves/train_output  \
     --preprocessing_num_workers 16 \
