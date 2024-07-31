@@ -2,6 +2,8 @@ import dashscope
 from add2k import add2k
 from pre_process import CreateTrainData
 from generate_instructions import generate_instructions
+import generate_dict
+import get_fullname
 
 # settings
 dashscope.api_key = "sk-8b43e7cbebe64ed2bbdb27dfd29cec7e"
@@ -33,3 +35,19 @@ p.run()
 # merge train and dev
 print('start generate instructions:')
 generate_instructions(train_jsonl, dev_jsonl, test_jsonl, train_json, test_json)
+
+# create dictionary
+print('start generate dictionary:')
+input_file = '../ptuning/data/raw_train.json'
+output_file = 'tmp_data/full_names.jsonl'
+data = get_fullname.read_json_file(input_file)
+full_names = get_fullname.extract_full_names(data)
+get_fullname.save_to_jsonl(full_names, output_file)
+
+abbr_file = 'tmp_data/simple_name.jsonl'
+fullname_file = 'tmp_data/full_names.jsonl'
+output_file = '../postprocess/dictionary.jsonl'
+abbreviations = generate_dict.read_abbreviations(abbr_file)
+fullnames = generate_dict.read_fullnames(fullname_file)
+matches = generate_dict.match_abbreviations_to_fullnames(abbreviations, fullnames)
+generate_dict.save_matches_to_jsonl(matches, output_file)
