@@ -7,6 +7,14 @@
 `./src`存放模型训练和推理代码  
 
 
+## 模型下载
+
+```bash
+cd model
+git lfs install
+git clone https://www.modelscope.cn/qwen/Qwen-14B.git
+```
+
 ## 训练
 
 ```bash
