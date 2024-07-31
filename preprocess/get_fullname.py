@@ -27,7 +27,7 @@ def extract_full_names(data):
 
 # 保存结果到jsonl文件
 def save_to_jsonl(data, output_file):
-    with jsonlines.open(output_file, 'w') as writer:
+    with jsonlines.open(output_file, 'w',encoding='utf-8') as writer:
         for item in data:
             writer.write(item)
 
