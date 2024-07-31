@@ -20,7 +20,7 @@ git clone https://www.modelscope.cn/qwen/Qwen-14B.git
 ```bash
 bash train.sh
 ```
-训练后的模型保存在`./saves/Qwen1.5-14B/full/train_output`
+训练后的模型保存在`./saves/train_output`
 
 
 ## 推理
@@ -28,4 +28,4 @@ bash train.sh
 ```bash
 bash test.sh
 ```
-推理结果保存在`./saves/Qwen1.5-14B/full/eval_output`
+推理结果保存在`./saves/eval_output`
