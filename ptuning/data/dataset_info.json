@@ -4,5 +4,11 @@
   },
   "test": {
     "file_name": "test.json"
+  },
+  "raw_train": {
+    "file_name": "raw_train.json"
+  },
+  "raw_test": {
+    "file_name": "raw_test.json"
   }
 }
