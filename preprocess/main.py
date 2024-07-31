@@ -18,9 +18,11 @@ train_out_excel = "../data-0520/train_add2000.xlsx"
 train_jsonl= './tmp_data/train.jsonl'
 dev_jsonl =  './tmp_data/dev.jsonl'
 test_jsonl = './tmp_data/test.jsonl'
+simple_name_jsonl = '../tmp_data/simple_name.jsonl'
 
 train_json = '../ptuning/data/train.json'
 test_json =  '../ptuning/data/test.json'
+
 
 # add data
 print('start add data:')
@@ -28,8 +30,17 @@ add2k(train_excel, train_out_excel, 2000)
 train_excel = train_out_excel
 
 # create training data
-print('start create training data:')
-p = CreateTrainData(standard_name_path, train_excel, dev_excel, test_excel, train_jsonl, dev_jsonl, test_jsonl)
+print('Start creating training data:')
+p = CreateTrainData(
+    standard_name_path=standard_name_path,
+    train_path=train_excel,
+    dev_path=dev_excel,
+    test_path=test_excel,
+    train_out_jsonl=train_jsonl,
+    dev_out_jsonl=dev_jsonl,
+    test_out_jsonl=test_jsonl,
+    simple_name_out_jsonl=simple_name_jsonl
+)
 p.run()
 
 # merge train and dev
