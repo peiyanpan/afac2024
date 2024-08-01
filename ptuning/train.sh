@@ -1,4 +1,4 @@
-torchrun --nnodes 1 --node_rank 0 --nproc_per_node 3 --master_addr 127.0.0.1 --master_port 28327 src/launcher.py \
+torchrun --nnodes 1 --node_rank 0 --nproc_per_node 8 --master_addr 127.0.0.1 --master_port 28327 src/launcher.py \
     --stage sft \
     --do_train True \
     --model_name_or_path models/Qwen1.5-14B \
